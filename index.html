@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>kuaiji101.com | 域名出售 / For Sale</title>
+    <style>
+        body, html { height: 100%; margin: 0; font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+        .bg {
+            background-image: url('https://bing.img.run/uhd.php'); 
+            height: 100%; background-position: center; background-repeat: no-repeat; background-size: cover;
+            display: flex; align-items: center; justify-content: center; color: white; text-align: center;
+        }
+        .container { 
+            background: rgba(0,0,0,0.6); 
+            padding: 50px; 
+            border-radius: 20px; 
+            max-width: 700px;
+            backdrop-filter: blur(10px); /* 磨砂玻璃效果 */
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .sale-tag {
+            background: #ff4757;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        h1 { font-size: 3rem; margin: 15px 0; color: #ffffff; }
+        .domain-desc { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
+        .contact-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #2ed573;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .contact-btn:hover { background: #7bed9f; transform: scale(1.05); }
+        hr { border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 30px 0; }
+        #hitokoto { font-style: italic; font-size: 1.1rem; min-height: 2rem; }
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <div class="container">
+            <span class="sale-tag">Domain For Sale</span>
+            <h1>kuaiji101.com</h1>
+            <p class="domain-desc">优质会计/财经行业域名，含义直观，易于记忆。</p>
+            
+            <a href="mailto:mitutong@qq.com" class="contact-btn">联系报价 / Contact Us</a>
+            
+            <hr>
+            <div id="hitokoto">正在获取行业寄语...</div>
+        </div>
+    </div>
+
+    <script>
+        // 动态抓取“一言”API
+        fetch('https://v1.hitokoto.cn')
+            .then(response => response.json())
+            .then(data => {
+                const hitokoto = document.getElementById('hitokoto')
+                hitokoto.innerText = "“" + data.hitokoto + "”"
+            })
+            .catch(console.error)
+    </script>
+</body>
+</html>
