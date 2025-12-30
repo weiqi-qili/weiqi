@@ -1,0 +1,74 @@
+# -----------------------------------------------------------
+# 导航栏设置
+# -----------------------------------------------------------
+navbar:
+  blog_title: 日本零食精选 # 导航栏左侧显示的文字
+  menu:
+    - { key: 'home', link: '/', icon: 'iconfont icon-home-fill' }
+    - { key: 'category', link: '/categories/', icon: 'iconfont icon-th-large' }
+    - { key: 'about', link: '/about/', icon: 'iconfont icon-user-fill' }
+
+# -----------------------------------------------------------
+# 首页设置
+# -----------------------------------------------------------
+index:
+  slogan:
+    text: "发现日本好味道" # 首页大图中间的文字
+  # 列表页显示模式
+  post_url_target: _self # 点击文章在当前窗口打开
+  
+  # 自动截取摘要（只显示图和前几行字）
+  auto_excerpt:
+    enable: true
+
+# -----------------------------------------------------------
+# 文章详情页设置
+# -----------------------------------------------------------
+post:
+  # 开启相关推荐 (根据标签推荐)
+  related_posts:
+    enable: true
+    heading: "猜你喜欢"
+    limit: 6
+    
+  # 开启图片懒加载 (关键！零食图多，不卡顿)
+  lazyload:
+    enable: true
+    loading_img: /img/loading.gif # 加载时显示的转圈图
+    onlypost: false
+
+  # 文章底部自定义区域（你的微信二维码放这里）
+  custom_html_bottom: >
+    <div style="background:#f8f9fa; padding:20px; margin-top:30px; border-radius:8px; text-align:center; border:1px solid #e9ecef;">
+        <h4 style="margin-bottom:15px; color:#444;">想买同款？添加微信咨询</h4>
+        <!-- 请把下面的图片链接换成你自己的微信二维码图片链接 -->
+        <img src="https://up.enterdesk.com/edpic_source/53/0a/20/530a20188989c441460c4068593cc137.jpg" style="width:150px; height:150px; border-radius:4px;">
+        <p style="margin-top:10px; color:#666; font-size:14px;">微信号：<strong>JPSnack2025</strong> (备注：零食)</p>
+    </div>
+
+# -----------------------------------------------------------
+# 静态资源加速 (解决国内慢的问题)
+# 这里我们将默认的国外CDN替换为国内的 BootCDN 或 Staticfile
+# -----------------------------------------------------------
+static_prefix:
+  # 强制使用 bootcdn 镜像，速度比国外的 jsdelivr 快很多
+  jquery: https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/
+  bootstrap: https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.1/
+  prism: https://cdn.bootcdn.net/ajax/libs/prism/1.29.0/
+  tocbot: https://cdn.bootcdn.net/ajax/libs/tocbot/4.18.2/
+  nprogress: https://cdn.bootcdn.net/ajax/libs/nprogress/0.2.0/
+
+# -----------------------------------------------------------
+# 页脚设置 (直接粘贴到文件最后面)
+# -----------------------------------------------------------
+footer:
+  # content: 页脚显示的文字，支持 HTML
+  content: 'Copyright © 2025 日本零食精选 <br> 微信咨询：JPSnack2025'
+
+  # 统计功能 (设为 false 关闭)
+  statistics:
+    enable: false
+    
+  # 备案信息 (设为 false 关闭)
+  beian:
+    enable: false
