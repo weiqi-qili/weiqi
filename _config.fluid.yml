@@ -71,7 +71,7 @@ static_prefix:
 # -----------------------------------------------------------
 footer:
   # content: 页脚显示的文字，支持 HTML
-  content: 'Copyright © 2025 日本零食精选 <br> 微信咨询：JPSnack2025'
+  content: 'Copyright © 2025 日本零食精选 <br> 微信咨询：taozigou2025'
 
   # 统计功能 (设为 false 关闭)
   statistics:
